@@ -42,7 +42,11 @@ class Album extends Component {
       this.play();
       }
     }
-  
+
+  mouseEnter() {
+    console.log('this is a mouse enter');
+  }
+
 
   render() {
     return (
@@ -66,7 +70,9 @@ class Album extends Component {
                {
                  this.state.album.songs.map( (song, index) =>
                    <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                     <td>{index +1 }.</td>
+                     <td onMouseEnter={this.mouseEnter()}>{index +1 }.</td>
+                     <td><span className="ion-play" ></span></td>
+                     <td><span className="ion-pause" ></span></td>
                      <td>{song.title}</td>
                      <td>{song.duration}</td>
                    </tr>
