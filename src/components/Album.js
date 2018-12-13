@@ -44,12 +44,14 @@ class Album extends Component {
     }
   }
 
-  mouseEnterHandler(song) {
+  mouseEnterHandler(song,index) {
     this.setState({ isHovered: true });
+    this.playOrPauseIcon(song,index);
   }
 
-  mouseLeaveHandler(song) {
+  mouseLeaveHandler(song,index) {
     this.setState({ isHovered: false });
+    this.playOrPauseIcon(song,index);
   }
 
   playOrPauseIcon(song, index) {
@@ -68,8 +70,8 @@ class Album extends Component {
       } else {
         btn = index + 1;
       }
-      return btn;
     }
+    return btn;
   }
 
   render() {
@@ -93,7 +95,7 @@ class Album extends Component {
                <tbody>
                {
                  this.state.album.songs.map( (song, index) =>
-                   <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnterHandler(song)} onMouseLeave={() => this.mouseLeaveHandler(song)} >
+                   <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnterHandler(song,index)} onMouseLeave={() => this.mouseLeaveHandler(song,index)} >
                      <td>
                        <button>
                          <span className="song-number">{this.playOrPauseIcon(song, index)}</span>
