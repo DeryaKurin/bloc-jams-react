@@ -10,7 +10,8 @@ class Album extends Component {
     this.state ={
       album: album,
       currentSong: album.songs[0],
-      isPlaying: false
+      isPlaying: false,
+      isHovered: false
     };
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
@@ -40,9 +41,37 @@ class Album extends Component {
         this.setSong(song);
       }
       this.play();
-      }
+    }
+  }
+
+  mouseEnterHandler(song) {
+    this.setState({ isHovered: true });
+  }
+
+  mouseLeaveHandler(song) {
+    this.setState({ isHovered: false });
+  }
+
+  playOrPauseIcon(song, index) {
+    const isSameSong = this.state.currentSong === song;
+
+
+    if(this.state.isPlaying) {
+      return <span className="icon ion-md-pause"></span>
+    } else {
+      return <span className="icon ion-md-play"></span>
     }
 
+    if(!isSameSong && this.state.isHovered) {
+      if(!this.state.isPlaying) {
+        return <span className="icon ion-md-play"></span>
+      } else {
+        return <span className="icon ion-md-pause"></span>
+      }
+    } else {
+      return '{index + 1}'
+    }
+  }
 
   render() {
     return (
@@ -65,12 +94,17 @@ class Album extends Component {
                <tbody>
                {
                  this.state.album.songs.map( (song, index) =>
-                   <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                     <td>{index +1 }.</td>
+                   <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnterHandler(song)} onMouseLeave={() => this.mouseLeaveHandler(song)} >
+                     <td>
+                       <button>
+                         <span className="song-number">{this.playOrPauseIcon(song, index)}</span>
+                       </button>
+                     </td>
                      <td>{song.title}</td>
-                     <td>{song.duration}</td>
+                     <td>{song.duration} seconds</td>
                    </tr>
-                 )}
+                 )
+               }
                </tbody>
              </table>
          </section>
