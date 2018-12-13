@@ -10,7 +10,8 @@ class Album extends Component {
     this.state ={
       album: album,
       currentSong: album.songs[0],
-      isPlaying: false
+      isPlaying: false,
+      isHovered: null
     };
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
@@ -40,13 +41,38 @@ class Album extends Component {
         this.setSong(song);
       }
       this.play();
-      }
     }
-
-  mouseEnter() {
-    console.log('this is a mouse enter');
   }
 
+  mouseEnterHandler(song) {(
+    this.setState({isHovered: song})
+  )}
+
+  mouseLeaveHandler(song) {
+    this.setState({isHovered: null})
+  }
+
+  playOrPauseIcon(song, index) {
+    const isSameSong = this.state.currentSong === song;
+    let btn;
+
+    if(this.state.isHovered === song) {
+        if (this.state.isPlaying && isSameSong) {
+        btn = <span className="icon ion-md-pause"></span>
+      } else {
+        btn = <span className="icon ion-md-play"></span>
+        }
+    } else {
+      if (this.state.isPlaying && isSameSong) {
+        btn = <span className="icon ion-md-pause"></span>
+      } else if (!this.state.isPlaying && isSameSong) {
+        btn = <span className="icon ion-md-play"></span>
+      } else {
+        btn = index + 1;
+      }
+    }
+    return btn;
+  }
 
   render() {
     return (
@@ -69,14 +95,17 @@ class Album extends Component {
                <tbody>
                {
                  this.state.album.songs.map( (song, index) =>
-                   <tr className="song" key={index} onClick={() => this.handleSongClick(song)}>
-                     <td onMouseEnter={this.mouseEnter()}>{index +1 }.</td>
-                     <td><span className="ion-play" ></span></td>
-                     <td><span className="ion-pause" ></span></td>
+                   <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnterHandler(song)} onMouseLeave={() => this.mouseLeaveHandler(song)} >
+                     <td>
+                       <button>
+                         <span className="song-number">{this.playOrPauseIcon(song, index)}</span>
+                       </button>
+                     </td>
                      <td>{song.title}</td>
-                     <td>{song.duration}</td>
+                     <td>{song.duration} seconds</td>
                    </tr>
-                 )}
+                 )
+               }
                </tbody>
              </table>
          </section>
