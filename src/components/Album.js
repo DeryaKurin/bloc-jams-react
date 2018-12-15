@@ -65,8 +65,6 @@ class Album extends Component {
     } else {
       if (this.state.isPlaying && isSameSong) {
         btn = <span className="icon ion-md-pause"></span>
-      } else if (!this.state.isPlaying && isSameSong) {
-        btn = <span className="icon ion-md-play"></span>
       } else {
         btn = index + 1;
       }
