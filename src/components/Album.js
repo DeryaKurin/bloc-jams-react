@@ -120,6 +120,12 @@ class Album extends Component {
     this.setState({ currentTime: newTime });
   }
 
+  formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = time - minutes * 60;
+    return `${minutes}:${seconds}`
+  }
+
   render() {
     return (
       <section className="album">
@@ -163,6 +169,7 @@ class Album extends Component {
                handlePrevClick={() => this.handlePrevClick()}
                handleNextClick={() => this.handleNextClick()}
                handleTimeChange={(e) => this.handleTimeChange(e)}
+               formatTime={() => this.formatTime(time)}
              />
          </section>
          </section>
