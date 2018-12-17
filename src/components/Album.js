@@ -35,14 +35,14 @@ class Album extends Component {
     };
     this.audioElement.addEventListener('timeupdate', this.eventListeners.timeupdate);
     this.audioElement.addEventListener('durationchange', this.eventListeners.durationchange);
-    this.audioElement.addEventListener('volumechange', this.eventListeners.volumeChange);
+    this.audioElement.addEventListener('volumechange', this.eventListeners.volumechange);
   }
 
   componentWillUnmount() {
     this.audioElement.src = null;
     this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
     this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
-    this.audioElement.removeEventListener('volumechange', this.eventListeners.volumeChange);
+    this.audioElement.removeEventListener('volumechange', this.eventListeners.volumechange);
   }
 
   play() {
@@ -181,7 +181,7 @@ class Album extends Component {
                currentSong={this.state.currentSong}
                currentTime={this.audioElement.currentTime}
                duration={this.audioElement.duration}
-               currentVolume={this.audioElement.currentVolume}
+               currentVolume={this.audioElement.volume}
                handleSongClick={() => this.handleSongClick(this.state.currentSong)}
                handlePrevClick={() => this.handlePrevClick()}
                handleNextClick={() => this.handleNextClick()}
