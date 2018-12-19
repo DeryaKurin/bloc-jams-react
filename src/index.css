@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("/Users/deryaokurin/Desktop/bloc-jams-react/public/assets/images/blurred_backgrounds/blur_bg_3.jpg");
 }
 
 code {

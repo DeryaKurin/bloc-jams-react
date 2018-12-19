@@ -1,0 +1,45 @@
+html {
+  font-size: 18px;
+}
+
+.hero-content {
+  background-image: url("/assets/images/blurred_backgrounds/concert.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+
+.hero-title {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 8px;
+  font-size: 4rem;
+  font-weight: lighter;
+  text-shadow: rgb(58, 23,63) 1px 1px 0px;
+  padding-top: 9rem;
+}
+
+.selling-points {
+  background-color: #602566;
+  color: #ffffff;
+  padding: 2.6rem;
+}
+
+.point img {
+  margin-bottom: 1.4rem;
+  height: 3rem;
+}
+
+.point-title {
+  padding-bottom: 2rem;
+}
+
+ .point {
+  padding: 2rem 2.6rem;
+}

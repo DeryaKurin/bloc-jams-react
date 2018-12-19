@@ -1,0 +1,21 @@
+.library {
+  background-image: url("/assets/images/blurred_backgrounds/blur_bg_3.jpg");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.album {
+  max-width: 16rem;
+}
+
+.album img {
+  height: 16rem;
+}
+
+.album-info {
+  color: white;
+  padding-top: 1rem;
+}
