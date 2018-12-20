@@ -13,9 +13,9 @@ class Library extends Component {
   render() {
     return (
       <section className='library'>
-        {
-          this.state.albums.map( (album, index) =>
-              <div className="album-list">
+
+        <div className="album-list">
+        {  this.state.albums.map( (album, index) =>
                 <div className="album">
                   <Link to={`/album/${album.slug}`} key={index}>
                     <img src={album.albumCover} alt={album.title} />
@@ -26,9 +26,9 @@ class Library extends Component {
                     </div>
                   </Link>
                 </div>
-              </div>
           )
         }
+        </div>
       </section>
     );
   }
