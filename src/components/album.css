@@ -26,3 +26,26 @@
   text-align: left;
   font-family:'Comfortaa', cursive;
 }
+
+@media all and (max-width: 830px) {
+  #album-info {
+   flex-direction: column;
+   margin: auto;
+ }
+
+ #album-cover-art {
+   height: 18rem;
+   width: 18rem;
+ }
+
+ .album-details {
+   padding: 1rem 1rem 0;
+ }
+}
+
+@media all and (max-width: 380px) {
+  #album-cover-art {
+    height: 14rem;
+    width: 14rem;
+  }
+}

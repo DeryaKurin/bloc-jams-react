@@ -27,7 +27,7 @@ html {
 .selling-points {
   background-color: #602566;
   color: #ffffff;
-  padding: 2.6rem;
+  padding: 3rem 0 4rem;
 }
 
 img.point  {
@@ -43,3 +43,6 @@ img.point  {
  .point {
   padding: 2rem 2.6rem;
 }
+
+
+@media all and (max-width: 480px) { }
