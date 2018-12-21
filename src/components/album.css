@@ -1,0 +1,28 @@
+#album {
+  background-image: url("/assets/images/blurred_backgrounds/blur_bg_3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10vh 10vw;
+}
+
+ #album-info {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 4rem;
+}
+
+#album-cover-art {
+  height: 18rem;
+}
+
+.album-details {
+  padding: 3rem;
+  text-align: left;
+  font-family:'Comfortaa', cursive;
+}

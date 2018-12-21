@@ -1,0 +1,28 @@
+.player-bar {
+  padding-top: 4rem;
+}
+
+#buttons {
+  padding-bottom: 2rem;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+#volume-control {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 10rem;
+}
+
+
+img.volume-icons {
+  height: 1.2rem;
+  margin-right: .6rem;
+  margin-top: .4rem;
+
+}

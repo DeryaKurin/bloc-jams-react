@@ -1,10 +1,16 @@
 .library {
   background-image: url("/assets/images/blurred_backgrounds/blur_bg_3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   max-width: 100%;
+  padding: 2rem 4rem 4rem;
 }
+
 
 .album-list {
     display: flex;
@@ -19,12 +25,19 @@
 }
 
 .album img {
-    height: 16rem;
+    height: 18rem;
 }
+
 
 .album-info {
     width: 100%;
     justify-content: space-between;
-    color: white;
     padding-top: 1rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: rgb(58, 23,63) 1px 1px 0px;
+}
+
+a:hover {
+  text-decoration: none;
 }

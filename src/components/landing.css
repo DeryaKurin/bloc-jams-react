@@ -12,7 +12,6 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 
@@ -31,13 +30,14 @@ html {
   padding: 2.6rem;
 }
 
-.point img {
+img.point  {
   margin-bottom: 1.4rem;
   height: 3rem;
 }
 
 .point-title {
   padding-bottom: 2rem;
+  font-size: 2.4rem;
 }
 
  .point {

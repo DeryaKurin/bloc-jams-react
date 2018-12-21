@@ -9,7 +9,7 @@ class Album extends Component {
     const album = albumData.find(album => {
       return album.slug === this.props.match.params.slug
     });
-    this.state ={
+    this.state = {
       album: album,
       currentSong: album.songs[0],
       currentTime: 0,
@@ -140,16 +140,16 @@ class Album extends Component {
 
   render() {
     return (
-      <section className="album">
+      <section id="album">
         <section id="album-info">
            <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title} />
            <div className="album-details">
-             <h1 id="album-title">{this.state.album.title}</h1>
-             <h2 className="artist">{this.state.album.artist}</h2>
+             <h3 id="album-title">{this.state.album.title}</h3>
+             <h5 className="artist">{this.state.album.artist}</h5>
              <div id="release-info">{this.state.album.releaseInfo}</div>
            </div>
          </section>
-         <section>
+         <section className="songs">
              <table id="song-list">
                <colgroup>
                  <col id="song-number-column" />
@@ -161,7 +161,7 @@ class Album extends Component {
                  this.state.album.songs.map( (song, index) =>
                    <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.mouseEnterHandler(song)} onMouseLeave={() => this.mouseLeaveHandler(song)} >
                      <td>
-                       <button>
+                       <button className="waves-effect waves-light btn pink darken-1">
                          <span className="song-number">{this.playOrPauseIcon(song, index)}</span>
                        </button>
                      </td>
@@ -186,7 +186,7 @@ class Album extends Component {
                formatTime={(time) => this.formatTime(time)}
              />
          </section>
-         </section>
+      </section>
     );
   }
 }

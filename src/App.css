@@ -3,14 +3,14 @@ text-align: center;
 }
 
 html {
-  background-color: #602566;
   font-size: 18px;
-}
-
-header {
   background-color: #602566;
 }
 
+header nav {
+  background-color: #602566;
+  height: auto;
+}
 
 .flex {
   display: flex;
