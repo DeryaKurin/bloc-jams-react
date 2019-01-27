@@ -1,3 +1,40 @@
+## Description 
+A music streaming app similar to Spotify, created by ReactJS. It uses React components to create relatively <br> 
+self-contained, re-usable modules of an application and unites them in a way that is descriptive. The end-product is an <br> 
+even more visually appealing site that is quite maintainable at the same time.
+
+## Home Page
+
+![Homepage](https://github.com/DeryaKurin/bloc-jams-react/blob/master/public/showcase/Screen%20Shot%202019-01-27%20at%201.23.00%20PM.png)
+
+## Home Page Features-Footer
+
+![Homepage](https://github.com/DeryaKurin/bloc-jams-react/blob/master/public/showcase/Screen%20Shot%202019-01-27%20at%201.25.42%20PM.png)
+
+## Collection 
+User can select an album in the collection and can view list of songs of that album.<br>
+
+![Homepage](https://github.com/DeryaKurin/bloc-jams-react/blob/master/public/showcase/Screen%20Shot%202019-01-27%20at%201.24.09%20PM.png)
+
+## Album Page
+
+User can play and change the song by clicking on the song they want to play. They can also use the control panel to change<br> 
+the volume and drop the song to listen to particular part of that song, or turn back to the previous song or can jump to <br> 
+the next song. <br>
+
+![Homepage](https://github.com/DeryaKurin/bloc-jams-react/blob/master/public/showcase/Screen%20Shot%202019-01-27%20at%201.25.24%20PM.png)
+
+## UI Mobile size version Album Page
+
+Interactive UI is created with FlexBox.
+
+![Homepage](https://github.com/DeryaKurin/bloc-jams-react/blob/master/public/showcase/Screen%20Shot%202019-01-27%20at%201.24.57%20PM.png)
+
+## UI Mobile size version Collection Page
+
+![Homepage](https://github.com/DeryaKurin/bloc-jams-react/blob/master/public/showcase/Screen%20Shot%202019-01-27%20at%201.24.34%20PM.png)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
