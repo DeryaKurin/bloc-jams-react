@@ -1,3 +1,6 @@
+A demo can be viewed here: https://deryaokurin-jammming.herokuapp.com/
+P.S: It takes a few seconds to display the app due to heroku deployement service.
+
 ## Description 
 A music streaming app similar to Spotify, created by ReactJS. It uses React components to create relatively <br> 
 self-contained, re-usable modules of an application and unites them in a way that is descriptive. The end-product is an <br> 
