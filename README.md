@@ -1,4 +1,4 @@
-A demo can be viewed here: https://deryaokurin-jammming.herokuapp.com/
+A demo can be viewed here: https://deryaokurin-jammming.herokuapp.com/<br>
 P.S: It takes a few seconds to display the app due to heroku deployement service.
 
 ## Description 
